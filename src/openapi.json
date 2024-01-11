@@ -1,0 +1,242 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "My Random API - OpenAPI 3.0",
+    "description": "This API is a comprehensive solution for testing scenarios, offering endpoints that generate mock data for users, posts, products, companies, addresses, books, orders, cities, and more. The data is dynamically created, making it ideal for testing different use cases.",
+    "termsOfService": "http://www.google.com",
+    "contact": {
+      "email": "info@aarontan.co.nz"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.11"
+  },
+  "externalDocs": {
+    "description": "Find out more about MockData API",
+    "url": "http://www.google.com"
+  },
+  "servers": [
+    {
+      "url": "https://idyllic-gingersnap-9c60c5.netlify.app/.netlify/functions/api"
+    }
+  ],
+  "tags": [
+    {
+      "name": "user",
+      "description": "Operations about user"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get List of Users",
+        "description": "Generates a list of mock user data.",
+        "operationId": "getListOfUsers",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "name": "John Doe",
+                    "email": "john.doe@example.com"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/posts": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get List of Posts",
+        "description": "Generates a list of mock post data.",
+        "operationId": "getListOfPosts",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "title": "Lorem Ipsum",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get List of Products",
+        "description": "Generates a list of mock product data.",
+        "operationId": "getListOfProducts",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "name": "Product Name",
+                    "price": 19.99
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get List of Companies",
+        "description": "Generates a list of mock company data.",
+        "operationId": "getListOfCompanies",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "name": "Company Name",
+                    "industry": "IT"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/addresses": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get List of Addresses",
+        "description": "Generates a list of mock address data.",
+        "operationId": "getListOfAddresses",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "street": "Address Street",
+                    "city": "City",
+                    "country": "Country"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/books": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get List of Books",
+        "description": "Generates a list of mock book data.",
+        "operationId": "getListOfBooks",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "title": "Book Title",
+                    "author": "Author Name"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get List of Orders",
+        "description": "Generates a list of mock order data.",
+        "operationId": "getListOfOrders",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "product": "Product Name",
+                    "quantity": 3
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get List of Cities",
+        "description": "Generates a list of mock city data.",
+        "operationId": "getListOfCities",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "name": "City Name",
+                    "population": 100000
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

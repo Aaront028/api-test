@@ -2,6 +2,7 @@ const express = require('express')
 const serverless = require('serverless-http')
 const cors = require('cors')
 const faker = require('faker')
+const openapi = require('./openapi.json')
 
 const app = express()
 
@@ -12,9 +13,7 @@ const router = express.Router()
 // Define API endpoints
 
 router.get('/', (req, res) => {
-  res.json({
-    Hello: 'hi',
-  })
+  res.json(openapi)
 })
 
 router.get('/users', (req, res) => {
