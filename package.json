@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "if [ \"$NO_MINIFY\" = \"true\" ]; then NODE_ENV=production ./node_modules/.bin/netlify-lambda build src; else npm run build-with-minify; fi",
+"build": "if [ \"$NO_MINIFY\" = \"true\" ]; then NODE_ENV=production ./node_modules/.bin/netlify-lambda build src; else npm run build-with-minify; fi",
     "build-with-minify": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
-  }  },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
