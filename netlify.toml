@@ -1,3 +1,4 @@
 [build]
-  command = "npm install && npm start"
-  publish = "."
+  command = "npm start"
+  functions = "server.js"
+  publish = "/"
