@@ -1,11 +1,20 @@
 const express = require('express')
+const serverless = require('serverless-http')
 const faker = require('faker')
 
 const app = express()
-const port = process.env.PORT || 3000
+
+const router = express.Router()
 
 // Define API endpoints
-app.get('/api/users', (req, res) => {
+
+router.get('/', (req, res) => {
+  res.json({
+    Hello: 'hi',
+  })
+})
+
+router.get('/users', (req, res) => {
   const users = Array.from({ length: 30 }, () => ({
     id: faker.random.uuid(),
     name: faker.name.firstName(),
@@ -15,7 +24,7 @@ app.get('/api/users', (req, res) => {
   res.json(users)
 })
 
-app.get('/api/posts', (req, res) => {
+router.get('/posts', (req, res) => {
   const posts = Array.from({ length: 30 }, () => ({
     id: faker.random.uuid(),
     title: faker.lorem.words(3),
@@ -25,7 +34,7 @@ app.get('/api/posts', (req, res) => {
   res.json(posts)
 })
 
-app.get('/api/products', (req, res) => {
+router.get('/products', (req, res) => {
   const products = Array.from({ length: 30 }, () => ({
     id: faker.random.uuid(),
     name: faker.commerce.productName(),
@@ -35,7 +44,7 @@ app.get('/api/products', (req, res) => {
   res.json(products)
 })
 
-app.get('/api/companies', (req, res) => {
+router.get('/companies', (req, res) => {
   const companies = Array.from({ length: 30 }, () => ({
     id: faker.random.uuid(),
     name: faker.company.companyName(),
@@ -45,7 +54,7 @@ app.get('/api/companies', (req, res) => {
   res.json(companies)
 })
 
-app.get('/api/addresses', (req, res) => {
+router.get('/addresses', (req, res) => {
   const addresses = Array.from({ length: 30 }, () => ({
     id: faker.random.uuid(),
     street: faker.address.streetName(),
@@ -56,7 +65,7 @@ app.get('/api/addresses', (req, res) => {
   res.json(addresses)
 })
 
-app.get('/api/books', (req, res) => {
+router.get('/books', (req, res) => {
   const books = Array.from({ length: 30 }, () => ({
     id: faker.random.uuid(),
     title: faker.random.words(3),
@@ -66,7 +75,7 @@ app.get('/api/books', (req, res) => {
   res.json(books)
 })
 
-app.get('/api/orders', (req, res) => {
+router.get('/orders', (req, res) => {
   const orders = Array.from({ length: 30 }, () => ({
     id: faker.random.uuid(),
     product: faker.commerce.productName(),
@@ -76,7 +85,7 @@ app.get('/api/orders', (req, res) => {
   res.json(orders)
 })
 
-app.get('/api/cities', (req, res) => {
+router.get('/cities', (req, res) => {
   const cities = Array.from({ length: 30 }, () => ({
     id: faker.random.uuid(),
     name: faker.address.city(),
@@ -86,7 +95,6 @@ app.get('/api/cities', (req, res) => {
   res.json(cities)
 })
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`)
-})
+app.use('/.netlify/functions/api', router)
+
+module.exports.handler = serverless(app)

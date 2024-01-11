@@ -1,4 +1,5 @@
 [build]
-  command = "npm start"
-  functions = "server.js"
-  publish = "/"
+functions = "functions"
+
+[dev]
+  publish = "dist"
