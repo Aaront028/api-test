@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
   functions = "functions"
+  environment = { NODE_ENV = "production", NO_MINIFY = "true" }
 
 [dev]
   publish = "dist"
