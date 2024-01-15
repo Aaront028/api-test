@@ -18,11 +18,11 @@ router.get('/', (req, res) => {
   res.json(openapi)
 })
 
-app.get('/tags.json', (req, res) => {
+router.get('/tags.json', (req, res) => {
   res.json(tags)
 })
 
-app.get('/paths.json', (req, res) => {
+router.get('/paths.json', (req, res) => {
   res.json(paths)
 })
 
