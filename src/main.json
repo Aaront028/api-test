@@ -23,9 +23,9 @@
     }
   ],
   "tags": {
-    "$ref": "./tags.json"
+    "$ref": "https://idyllic-gingersnap-9c60c5.netlify.app/.netlify/functions/api/tags.json"
   },
   "paths": {
-    "$ref": "./paths.json"
+    "$ref": "https://idyllic-gingersnap-9c60c5.netlify.app/.netlify/functions/api/paths.json"
   }
 }
