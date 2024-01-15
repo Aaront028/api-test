@@ -3,6 +3,8 @@ const serverless = require('serverless-http')
 const cors = require('cors')
 const faker = require('faker')
 const openapi = require('./main.json')
+const tags = require('./tags.json')
+const paths = require('./paths.json')
 
 const app = express()
 
@@ -14,6 +16,14 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
   res.json(openapi)
+})
+
+app.get('/tags.json', (req, res) => {
+  res.json(tags)
+})
+
+app.get('/paths.json', (req, res) => {
+  res.json(paths)
 })
 
 router.get('/users', (req, res) => {
