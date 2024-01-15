@@ -1,0 +1,195 @@
+{
+  "/users": {
+    "get": {
+      "tags": ["user"],
+      "summary": "Get List of Users",
+      "description": "Generates a list of mock user data.",
+      "operationId": "getListOfUsers",
+      "responses": {
+        "200": {
+          "description": "Successful operation",
+          "content": {
+            "application/json": {
+              "example": [
+                {
+                  "id": "random-uuid",
+                  "name": "John Doe",
+                  "email": "john.doe@example.com"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "/posts": {
+    "get": {
+      "tags": ["user"],
+      "summary": "Get List of Posts",
+      "description": "Generates a list of mock post data.",
+      "operationId": "getListOfPosts",
+      "responses": {
+        "200": {
+          "description": "Successful operation",
+          "content": {
+            "application/json": {
+              "example": [
+                {
+                  "id": "random-uuid",
+                  "title": "Lorem Ipsum",
+                  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "tags": ["user"],
+        "summary": "Get List of Products",
+        "description": "Generates a list of mock product data.",
+        "operationId": "getListOfProducts",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "name": "Product Name",
+                    "price": 19.99
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies": {
+      "get": {
+        "tags": ["user"],
+        "summary": "Get List of Companies",
+        "description": "Generates a list of mock company data.",
+        "operationId": "getListOfCompanies",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "name": "Company Name",
+                    "industry": "IT"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/addresses": {
+      "get": {
+        "tags": ["user"],
+        "summary": "Get List of Addresses",
+        "description": "Generates a list of mock address data.",
+        "operationId": "getListOfAddresses",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "street": "Address Street",
+                    "city": "City",
+                    "country": "Country"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/books": {
+      "get": {
+        "tags": ["user"],
+        "summary": "Get List of Books",
+        "description": "Generates a list of mock book data.",
+        "operationId": "getListOfBooks",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "title": "Book Title",
+                    "author": "Author Name"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/orders": {
+      "get": {
+        "tags": ["user"],
+        "summary": "Get List of Orders",
+        "description": "Generates a list of mock order data.",
+        "operationId": "getListOfOrders",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "product": "Product Name",
+                    "quantity": 3
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities": {
+      "get": {
+        "tags": ["user"],
+        "summary": "Get List of Cities",
+        "description": "Generates a list of mock city data.",
+        "operationId": "getListOfCities",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": "random-uuid",
+                    "name": "City Name",
+                    "population": 100000
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "My Random API - OpenAPI 3.0",
+    "description": "This API is a comprehensive solution for testing scenarios, offering endpoints that generate mock data for users, posts, products, companies, addresses, books, orders, cities, and more. The data is dynamically created, making it ideal for testing different use cases.",
+    "termsOfService": "http://www.google.com",
+    "contact": {
+      "email": "info@aarontan.co.nz"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.11"
+  },
+  "externalDocs": {
+    "description": "Find out more about MockData API",
+    "url": "http://www.google.com"
+  },
+  "servers": [
+    {
+      "url": "https://idyllic-gingersnap-9c60c5.netlify.app/.netlify/functions/api"
+    }
+  ],
+  "tags": {
+    "$ref": "https://raw.githubusercontent.com/aaron-tan/mockapi/master/tags.json"
+  },
+  "paths": {
+    "$ref": "https://raw.githubusercontent.com/aaron-tan/mockapi/master/paths.json"
+  }
+}
