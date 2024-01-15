@@ -23,9 +23,9 @@
     }
   ],
   "tags": {
-    "$ref": "https://raw.githubusercontent.com/aaron-tan/mockapi/master/tags.json"
+    "$ref": "./tags.json"
   },
   "paths": {
-    "$ref": "https://raw.githubusercontent.com/aaron-tan/mockapi/master/paths.json"
+    "$ref": "./paths.json"
   }
 }
