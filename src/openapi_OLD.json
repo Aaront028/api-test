@@ -26,14 +26,6 @@
     {
       "name": "user",
       "description": "Operations about user"
-    },
-    {
-      "name": "posts",
-      "description": "Operations about posts"
-    },
-    {
-      "name": "products",
-      "description": "Operations about products"
     }
   ],
   "paths": {
@@ -66,7 +58,7 @@
     "/posts": {
       "get": {
         "tags": [
-          "posts"
+          "user"
         ],
         "summary": "Get List of Posts",
         "description": "Generates a list of mock post data.",
@@ -92,7 +84,7 @@
     "/products": {
       "get": {
         "tags": [
-          "products"
+          "user"
         ],
         "summary": "Get List of Products",
         "description": "Generates a list of mock product data.",
@@ -242,21 +234,6 @@
                 ]
               }
             }
-          }
-        }
-      }
-    },
-    "/sample": {
-      "get": {
-        "tags": [
-          "user"
-        ],
-        "summary": "Get Sample Data",
-        "description": "Retrieve sample data",
-        "operationId": "getSampleData",
-        "responses": {
-          "200": {
-            "description": "Successful response"
           }
         }
       }

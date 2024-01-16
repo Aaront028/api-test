@@ -18,13 +18,13 @@ router.get('/', (req, res) => {
   res.json(openapi)
 })
 
-router.get('/tags.json', (req, res) => {
-  res.json(tags)
-})
+// router.get('/tags.json', (req, res) => {
+//   res.json(tags)
+// })
 
-router.get('/paths.json', (req, res) => {
-  res.json(paths)
-})
+// router.get('/paths.json', (req, res) => {
+//   res.json(paths)
+// })
 
 router.get('/users', (req, res) => {
   const users = Array.from({ length: 30 }, () => ({
