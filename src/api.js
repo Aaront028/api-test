@@ -2,7 +2,7 @@ const express = require('express')
 const serverless = require('serverless-http')
 const cors = require('cors')
 const faker = require('faker')
-const openapi = require('./main.json')
+const openapi = require('./openapi.json')
 const tags = require('./tags.json')
 const paths = require('./paths.json')
 
